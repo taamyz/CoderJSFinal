@@ -50,8 +50,13 @@ section.grid {
     display: grid;
     margin: 60px 0px 60px 0px;
     grid-gap: 80px 120px;
-    grid-template-columns: repeat(auto-fill, minmax(720px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
 }
+
+/* section.grid img {
+    width: 100%;  
+    max-width: 600px;  
+}*/
 
 section.grid:only-child {
     justify-content: flex-end;
@@ -69,11 +74,43 @@ h2 {
     font-family: "SharpSans-Bold";
 }
 
+h2:before {
+  content: "";
+  display: inline-block;
+  height: 0.7em;
+  width: 0.7em;
+  border-radius: 50%;
+  background-color: #1c1c1c;
+  margin-right: 0.4em;
+  transition: transform 0.4s 0.5s;
+  transform: scale(0);
+}
+
+
+h2.in-view:before {
+    transform: scale(1);;
+}
+
 p.description {
     line-height: 1.5;
     font-size: 24px;
 }
 
+
+div.image {
+    overflow: hidden;
+}
+
+div.image img {
+    transform: translate(0,120%);
+    transition: transform 1s;
+}
+
+
+
+div.image.in-view img {
+    transform: translate(0,0%);
+}
 
 footer {
     border-top: 0.5px solid #1c1c1c;

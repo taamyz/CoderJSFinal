@@ -38,11 +38,11 @@ const grabData = function () {
 }
 
 grabData().then(data => {
-    console.log(data)
+    console.log(data);
 
     const content = data.map(item => `
         <div class="item">
-            <img src="${item.image}">
+            <div class="image"><img src="${item.image}"></div>
             <div class="title">
                 <h2>${item.coffeeName}</h2>
                 <p>${item.mainProperty}</p>
@@ -52,7 +52,9 @@ grabData().then(data => {
     `).join('');
 
     sectionTag.innerHTML = content;
-})
+
+    setupObserverWhenHeadersReady();
+});
 
 /*
 const spaceId = "hpth0uulbqvw"
