@@ -123,6 +123,72 @@ footer > p {
     margin: 32px 0px 32px 0px;
 }
 
+
+.switch-leave-active,
+.switch-enter-active,
+.switch-leave-active,
+.switch-enter-active {
+  transition: opacity 450ms ease, transform 650ms ease-in-out;
+}
+
+.switch-leave,
+.switch-enter-to {
+  opacity: 1;
+}
+
+.switch-enter,
+.switch-leave-to {
+  opacity: 0;
+}
+
+.switch-leave,
+.switch-enter-to {
+  transform: translateX(0);
+}
+
+.switch-enter,
+.switch-leave-to {
+  transform: translateX(100%);
+}
+
+.hidden {
+    display: none;
+}
+
+#filter button {
+    text-align: center;
+    display: inline-block;
+    padding: 15px 40px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    position:relative;
+    overflow:hidden;
+    margin: 0 20px;
+    text-transform: uppercase;
+    font-family: "SharpSans-Medium", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    border-style: none;
+    background-color: #F1EDE1;
+  }
+  
+  #filter button:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    background : #1c1c1c;
+    left: 45%;
+    height: 1px;
+    bottom: 0;
+    transition: all .3s;
+    opacity: 0.7;
+  }
+  
+  #filter button:hover:before {
+    width: 100%;
+    left:0;
+}
+
+
 @media (max-width: 640px) {
     body {
         font-size: 12px; 

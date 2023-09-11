@@ -21,4 +21,23 @@ function setupObserverWhenHeadersReady() {
     imageHolders.forEach(holder => {
         observer.observe(holder);
     });
+
 }
+
+barba.use(barbaCss)
+
+barba.init({
+
+    transitions: [{
+
+        name: "switch"
+    
+    }],
+    
+    views: [],
+    
+    debug: true, 
+
+})
+
+console.log(observer)
